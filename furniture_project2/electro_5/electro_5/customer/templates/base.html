@@ -149,17 +149,20 @@ https://templatemo.com/tm-571-hexashop
                         <div class="collapse navbar-collapse main-menu-item">
                             <!-- <a id="search_1" href="javascript:void(0)"><i class="ti-search"></i></a> -->
                             {%if user.is_authenticated%}
+                             <li class=" mx-2">
                             <a href="{% url 'wishlist' %}"><i class="fa fa-heart"></i>({{wishlist_count}})</a>
                             {% else %}
                             <a href="{% url 'wishlist' %}"><i class="fa fa-heart"></i></a>
                             {% endif %}
-
+                            </li>
+                            <li class="mx-3">
 
                             {%if user.is_authenticated%}
                             <a href="{% url 'cart' %}"><i class="fas fa-cart-plus"></i>({{counter}})</a>
                             {% else %}
                             <a href="{% url 'cart' %}"><i class="fas fa-cart-plus"></i></a>
                             {% endif %}
+                                </li>
 
                             <!-- <div class="dropdown cart">
                                 <a class="dropdown-toggle" href="{% url 'cart' %}" id="navbarDropdown3" role="button"
